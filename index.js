@@ -13,7 +13,9 @@ const tutorials = [
 
 const titleCased = () => {
 
-  let tutorialCopy = tutorials.map((line) => {
+  let tutorialCopy = []
+
+  tutorials.map((line) => {
     let sentence = line.split();
     //console.log(sentence)
     let words = sentence[0].split(" ");
@@ -23,6 +25,9 @@ const titleCased = () => {
       return capitalizedWord;
     })
     sentence = words.join(" ");
+    
+    tutorialCopy.push(sentence);
+    
   })
 
   tutorials.map((line, index) => {
